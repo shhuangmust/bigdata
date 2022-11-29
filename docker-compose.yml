@@ -7,6 +7,6 @@ services:
      environment:
         MYSQL_ROOT_PASSWORD: abc1234
   myadmin:
-     image: phymyadmin
+     image: phpmyadmin
      ports:
        - 80:80
