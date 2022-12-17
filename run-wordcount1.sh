@@ -1,5 +1,6 @@
 # clean old input files
-hdfs dfs -rm input/*
+hadoop fs -mkdir -p input
+
 # put input files to HDFS
 hdfs dfs -put ./input/* input
 
