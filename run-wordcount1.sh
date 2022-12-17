@@ -1,4 +1,5 @@
- put input files to HDFS
+#put input files to HDFS
+hdfs dfs -rm input/*
 hdfs dfs -put ./input/* input
 
 # run wordcount
