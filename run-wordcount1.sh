@@ -1,7 +1,9 @@
 # get input files
 mkdir input
-wget https://github.com/shhuangmust/bigdata/raw/main/file1.txt > input/file1.txt
-wget https://github.com/shhuangmust/bigdata/raw/main/file2.txt > input/file2.txt
+wget https://github.com/shhuangmust/bigdata/raw/main/file1.txt
+wget https://github.com/shhuangmust/bigdata/raw/main/file2.txt
+mv file1.txt input/file1.txt
+mv file2.txt input/file2.txt
 
 # put input files to HDFS
 hadoop fs -mkdir -p input
