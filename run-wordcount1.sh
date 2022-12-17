@@ -1,7 +1,11 @@
-# clean old input files
-hadoop fs -mkdir -p input
+# get input files
+mkdir input
+cd input
+wget https://github.com/shhuangmust/bigdata/raw/main/file1.txt
+wget https://github.com/shhuangmust/bigdata/raw/main/file2.txt
 
 # put input files to HDFS
+hadoop fs -mkdir -p input
 hdfs dfs -put ./input/* input
 
 # run wordcount
