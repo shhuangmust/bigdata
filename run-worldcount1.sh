@@ -3,11 +3,11 @@ hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/sources/hadoop-mapreduce-examples
 mples.WordCount input output
 
 # print the input files
-echo -e "\ninput file3.txt:"
-hdfs dfs -cat input/file3.txt
+#echo -e "\ninput file3.txt:"
+#hdfs dfs -cat input/file3.txt
 
-echo -e "\ninput file4.txt:"
-hdfs dfs -cat input/file4.txt
+#echo -e "\ninput file4.txt:"
+#hdfs dfs -cat input/file4.txt
 
 # print the output of wordcount
 echo -e "\nwordcount output:"
