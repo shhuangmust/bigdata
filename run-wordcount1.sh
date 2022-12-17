@@ -1,3 +1,6 @@
+ put input files to HDFS
+hdfs dfs -put ./input/* input
+
 # run wordcount
 hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/sources/hadoop-mapreduce-examples-2.7.2-sources.jar org.apache.hadoop.exa
 mples.WordCount input output
