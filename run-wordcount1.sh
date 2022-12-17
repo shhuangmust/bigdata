@@ -1,3 +1,10 @@
+# clean previous data
+rm -rf input
+hdfs dfs -rm input/*
+hdfs dfs -rmdir input/
+hdfs dfs -rm output/*
+hdfs dfs -rmdir output/
+
 # get input files
 mkdir input
 wget https://github.com/shhuangmust/bigdata/raw/main/file1.txt
