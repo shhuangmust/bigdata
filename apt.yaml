@@ -1,0 +1,10 @@
+---
+- name: Apt update and upgrade
+  hosts: server1
+
+  tasks:
+  - name: Upgrade all apt packages
+    apt:
+      update_cache: true
+      upgrade: full
+    become: true
