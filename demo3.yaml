@@ -1,0 +1,17 @@
+---
+- name: Install nginx and start the web server
+  hosts: server1 
+  tasks:
+  - name: Install nginx from apt
+    ansible.builtin.apt:
+      name: nginx
+      update_cache: true
+      state: latest
+    become: true
+    become_method: sudo
+  - name: start and enable nginx service
+    service:
+     name: nginx
+     enabled: true
+     state: started
+    become: true
