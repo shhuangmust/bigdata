@@ -1,0 +1,10 @@
+---
+- name: Stop nginx and uninstall the web server
+  hosts: server1
+  tasks:
+  - name: stop nginx
+    service:
+      name: nginx
+      state: stopped
+  - name: uninstall the web server
+    apt: name=nginx state=absent
