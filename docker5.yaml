@@ -1,0 +1,34 @@
+---
+- name: Install docker
+  hosts: server1
+  become: true
+  vars_files:
+    - vars.yaml
+
+  tasks:
+    - name: Test Connection
+      ping:
+
+    - name: Install required packages
+      apt:
+        name: "{{ item }}"
+        state: latest
+        update_cache: true
+      loop: "{{ requried_packages }}"
+
+    - name: Add docker's official GPG key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Add docker repository
+      apt_repository:
+        repo: deb https://download.docker.com/linux/ubuntu jammy stable
+        state: present
+
+    - name: Update apt cache and install docker engine
+      apt:
+        name: "{{ item }}"
+        state: latest
+        update_cache: true
+      loop: "{{ docker_engines }}"
