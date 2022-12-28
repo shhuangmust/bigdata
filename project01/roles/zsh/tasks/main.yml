@@ -1,0 +1,6 @@
+---
+  - name: install zsh and dependencies
+    package:
+      name: "{{ zsh_dependencies }}"
+      state: present 
+    become: true

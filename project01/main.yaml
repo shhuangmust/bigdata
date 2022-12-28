@@ -1,0 +1,9 @@
+---
+  - hosts: server1
+    roles:
+      - { role: apt }
+      - { role: zsh }
+      - role: gantsign.oh-my-zsh 
+        users:
+          - username: ansible
+      - { role: omz }
