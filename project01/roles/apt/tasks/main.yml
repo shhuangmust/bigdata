@@ -1,0 +1,7 @@
+---
+# tasks file for apt
+  - name: apt update and upgrade
+    apt:
+      update_cache: true
+      upgrade: full
+    become: true  

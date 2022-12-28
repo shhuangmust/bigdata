@@ -1,0 +1,5 @@
+server1 ansible_host=10.0.2.4 ansible_user=ansible ansible_port=22 ansible_ssh_private_key_file=~/.ssh/ansible
+server2 ansible_host=10.0.2.4 ansible_user=ansible ansible_port=22 ansible_ssh_private_key_file=~/.ssh/ansible
+
+[webservers]
+server1

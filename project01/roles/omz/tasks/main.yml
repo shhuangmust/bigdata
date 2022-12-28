@@ -1,0 +1,20 @@
+---
+  - name: update configuration files
+    ansible.builtin.copy:
+      src: myclean.zsh-theme
+      dest: /home/ansible/.oh-my-zsh/custom/themes/myclean.zsh-theme
+    
+  - name: update .zshrc
+    ansible.builtin.copy:
+      src: .zshrc
+      dest: /home/ansible/.zshrc
+ 
+  - name: clone omz plugins
+    ansible.builtin.git:
+      repo: https://github.com/zsh-users/zsh-completions
+      dest: /home/ansible/.oh-my-zsh/custom/plugins/zsh-completions
+ 
+  - name: clone synteax highlight
+    ansible.builtin.git:
+      repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+      dest: /home/ansible/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting

@@ -1,0 +1,6 @@
+---
+# dependencies for zsh
+zsh_dependencies:
+  - git
+  - zsh
+  - autojump
